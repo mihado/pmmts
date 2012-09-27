@@ -12,6 +12,7 @@
 	Log Out: session_path("current") based on recommendation on railscast #250
 	The helper_method in the sessions controller expects <something> to be passed to it, however it doesn't do anything cuz it's setting session[:id] = nil
 	-->
+	<!-- Old routes
 	<div>
 		<% if current_user %>
 			Logged in as <%= current_user.username %> |
@@ -19,6 +20,17 @@
 		<% else %>
 			<%= link_to "Sign Up", new_user_path %>
 			<%= link_to "Log In", new_session_path %>
+		<% end %>
+	</div> -->
+
+	<!-- New routes -->
+	<div>
+		<% if current_user %>
+			Logged in as <%= current_user.username %> |
+			<%= link_to "Log Out", logout_path %>
+		<% else %>
+			<%= link_to "Sign Up", signup_path %>
+			<%= link_to "Log In", login_path %>
 		<% end %>
 	</div>
 
