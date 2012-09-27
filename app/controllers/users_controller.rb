@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
+# Action: new | create a new user instance & display the sign up form
 	def new
 		@user = User.new
 	end
 
+# Action: save the user to the db OR re-render the form if there's validation error
 	def create
 		@user = User.new(params[:user])
 		if @user.save
