@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 # Log In
 	# find a user by matching the entered username
 	# if there is a user && the password match the saved one (find the password subjecting to the username)
-	# assign the user_id of the current session = user.id
+	# assign the id of the current session = user.id
 	# redirect_to <the root URL for now>
 	# if either username or password is incorrect, flash a msg & re-render the form
 
