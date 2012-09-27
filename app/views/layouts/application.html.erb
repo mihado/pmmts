@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PMMTS</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>PMMTS</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<div>
-	<%= link_to "Sign Up", new_user_path %>
-	<%= link_to "Log In", new_session_path %>
-</div>
+	<!-- Log In, Log Out
+	Log Out: session_path("current") based on recommendation on railscast #250
+	The helper_method in the sessions controller expects <something> to be passed to it, however it doesn't do anything cuz it's setting session[:id] = nil
+	-->
+	<div>
+		<% if current_user %>
+			Logged in as <%= current_user.username %> |
+			<%= link_to "Log Out", session_path("current"), method: "delete" %>
+		<% else %>
+			<%= link_to "Sign Up", new_user_path %>
+			<%= link_to "Log In", new_session_path %>
+		<% end %>
+	</div>
 
-<% flash.each do |name, msg| %>
+	<% flash.each do |name, msg| %>
 	<%= content_tag :div, msg, id: "flash_#{name}" %>
-<% end %>
+	<% end %>
 
-<%= yield %>
+	<%= yield %>
 
 </body>
 </html>
