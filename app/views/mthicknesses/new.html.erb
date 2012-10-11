@@ -1,0 +1,22 @@
+<h1>Create New Thickness</h1>
+<p>Mthicknesses#new</p>
+
+<%= form_for @mthickness do |t| %>
+  <% if @mthickness.errors.any? %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% mthickness.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= t.label :thickness %><br />
+    <%= t.text_field :thickness %>
+  </div>
+
+  <div class="actions"><%= t.submit "Add" %></div>
+<% end %>

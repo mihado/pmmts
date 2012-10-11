@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
 			end
 		end
 
-		# allow for advanced administrative task
+		# allow for administrative tasks
 		def admin?
 			current_user && current_user.username == "admin"
 		end

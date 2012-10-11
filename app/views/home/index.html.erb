@@ -2,9 +2,15 @@
 <p>Home#index</p>
 
 <% if admin? %>
-	<%= link_to "Sign Up", signup_path %>
-	<p>link_to #Create New Material Type</p>
-	<p>link_to #Create New Material</p>
+	<h2>User</h2>
+		<%= link_to "New User", signup_path %>
+	<h2>Material Types</h2>
+		<p>Show All Material Types</p>
+		<p>Add New Material Type</p>
+	<h2>Material Thickness</h2>
+		<%= link_to "All Thickness", mthicknesses_path %><br />
+		<%= link_to "New Thickness", new_mthickness_path %>
+	<h2>Offcut</h2>
 	<p>link_to #Report</p>
 <% end %>
 
