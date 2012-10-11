@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
-  def index
-  end
+
+	before_filter :current_user
+
+	def index
+	end
 end
