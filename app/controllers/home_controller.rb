@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-	before_filter :current_user
+	before_filter :authorize
 
 	def index
 	end

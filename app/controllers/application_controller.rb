@@ -12,12 +12,19 @@ class ApplicationController < ActionController::Base
 		def current_user
 			if session[:user_id]
 				@current_user ||= User.find(session[:user_id])
-			else
-				#redirect_to login_url, alert: "Please log in to continue"
 			end
 		end
 
+		# the user must log in before he can use any function
+		# active this in home_controller with before_filter
+		def authorize
+			if current_user.nil?
+				redirect_to login_url, alert: "Please log in to continue"
+			end
+		end
+
+		# allow for advanced administrative task
 		def admin?
-			current_user && current_user.username = "admin"
+			current_user && current_user.username == "admin"
 		end
 end
