@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+before_filter :authorize
+
 # Action: new | create a new user instance & display the sign up form
 	def new
 		@user = User.new

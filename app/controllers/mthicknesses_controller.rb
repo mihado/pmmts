@@ -1,5 +1,7 @@
 class MthicknessesController < ApplicationController
 
+before_filter :authorize
+
 # Action: show all thicknesses	
 	def index
 		@mthicknesses = Mthickness.all 

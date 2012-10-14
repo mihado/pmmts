@@ -69,10 +69,6 @@
 	text-align: center;
 }
 
-body {
-	font-family: 'DroidSansRegular', Arial, sans-serif;
-}
-
 h1, h2, h3, h4 {
 	font-family: 'GraublauWebRegular', Arial, sans-serif; 
 	font-size-adjust: 0.54;

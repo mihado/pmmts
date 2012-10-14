@@ -1,9 +1,12 @@
 <div class="content">
-<p><%= link_to "New Thickness", new_mthickness_path %></p>
-
-<ul>
-<% @mthicknesses.each do |mthickness| %>
-	<li><%= mthickness.thickness %> mm</li>
-<% end %>
-</ul>
+	<h1>All Thicknesses - mthicknesses#index</h1>
+	<% if admin? %>
+		<%= link_to "New Thickness", new_mthickness_path %>
+	<% end %>
+	
+	<ul>
+	<% @mthicknesses.each do |mthickness| %>
+		<li><%= mthickness.thickness %> mm</li>
+	<% end %>
+	</ul>
 </div>

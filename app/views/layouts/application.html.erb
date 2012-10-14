@@ -36,16 +36,18 @@
 				<% end %>
 			</div>
 
+			<!--
 			<div class="alert_msg">
-				<% flash.each do |name, msg| %>
-				<%= content_tag :div, msg, id: "flash_#{name}" %>
-				<% end %>
+				<%# flash.each do |name, msg| %>
+				<%#= content_tag :div, msg, id: "flash_#{name}" %>
+				<%# end %>
 			</div>
+			-->
 
 			<%= yield %>
 
 			<div class="root_link">
-				<%= link_to "Back", root_url %>
+				<%= link_to "HOME", root_url %>
 			</div>
 		</div>
 	</div>
