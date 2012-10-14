@@ -1,3 +1,5 @@
+<p><%= link_to "New Thickness", new_mthickness_path %></p>
+
 <% @mthicknesses.each do |mthickness| %>
-	<%= mthickness.thickness %> mm
+	<p><%= mthickness.thickness %> mm</p>
 <% end %>
