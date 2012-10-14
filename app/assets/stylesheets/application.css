@@ -65,6 +65,10 @@
 	text-align: center
 }
 
+.alert_msg {
+	text-align: center;
+}
+
 body {
 	font-family: 'DroidSansRegular', Arial, sans-serif;
 }
