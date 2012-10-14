@@ -1,5 +1,5 @@
-<h1>Sign Up</h1>
-<p>Users#new</p>
+<div class="content">
+<h1>New User - users#new</h1>
 
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
@@ -30,3 +30,4 @@
 
   <div class="actions"><%= f.submit "Sign Up" %></div>
 <% end %>
+</div>

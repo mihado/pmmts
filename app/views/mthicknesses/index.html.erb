@@ -1,5 +1,9 @@
+<div class="content">
 <p><%= link_to "New Thickness", new_mthickness_path %></p>
 
+<ul>
 <% @mthicknesses.each do |mthickness| %>
-	<p><%= mthickness.thickness %> mm</p>
+	<li><%= mthickness.thickness %> mm</li>
 <% end %>
+</ul>
+</div>

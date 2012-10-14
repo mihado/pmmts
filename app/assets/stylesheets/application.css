@@ -35,6 +35,56 @@
     font-style: normal;
 }
 
+.mainContainer {
+	position: relative;
+	display: block;
+	background: #fafafa;
+	width: 720px; /*Width of main container*/
+	margin: 0 auto; /*Center container on page*/
+	padding: 0 0 0 0;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.contentWrapper {
+	position: relative;
+	width: 100%;
+	display: block;
+	padding: 20px 0 10px 0;
+}
+
+.content{
+	padding: 0 0 0 10px;
+}
+
+.main_nav {
+	text-align: right;
+	padding: 0 5px 0 0;
+}
+
+.root_link {
+	text-align: center
+}
+
 body {
 	font-family: 'DroidSansRegular', Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'GraublauWebRegular', Arial, sans-serif; 
+	font-size-adjust: 0.54;
+	margin: 0;
+	padding: 10px 0 10px 0;
+	display: block;
+}
+h1 {font-size: 200%;}
+h2 {font-size: 175%;}
+h3 {font-size: 150%;}
+h4 {font-size: 125%;}
+
+li:nth-child(odd) {
+  background:   #e0f8f8;
+}
+
+li:nth-child(even) {
+  background:   #fffff0;
 }
