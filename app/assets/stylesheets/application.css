@@ -67,6 +67,19 @@
 
 .alert_msg {
 	text-align: center;
+	color: red;
+}
+
+table {
+	width: 100%;
+
+}
+tr:nth-child(odd) {
+  background:   #e0f8f8;
+}
+
+tr:nth-child(even) {
+  background:   #fffff0;
 }
 
 h1, h2, h3, h4 {

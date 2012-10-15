@@ -1,5 +1,4 @@
-<div class="content">
-<h1>New User - users#new</h1>
+<h1>New User</h1>
 
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
@@ -28,6 +27,5 @@
     <%= f.password_field :password_confirmation %>
   </div>
 
-  <div class="actions"><%= f.submit "Sign Up" %></div>
+  <div class="actions"><%= f.submit "Add User" %></div>
 <% end %>
-</div>

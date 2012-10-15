@@ -1,23 +1,27 @@
-<div class="content">
-<h1>Material Types - mtypes#index</h1>
-<%= link_to 'New Material Type', new_mtype_path %>
+<h1>Material Types</h1>
+
+<% if admin? %>
+  <%= link_to 'New Material Type', new_mtype_path %>
+<% end %>
+
 <table>
   <tr>
     <th>Code</th>
     <th>Desc</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
-<% @mtypes.each do |mtype| %>
+  <% @mtypes.each do |mtype| %>
   <tr>
     <td><%= mtype.code %></td>
     <td><%= mtype.desc %></td>
-    <td><%= link_to 'Show', mtype %></td>
-    <td><%= link_to 'Edit', edit_mtype_path(mtype) %></td>
-    <td><%= link_to 'Destroy', mtype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if admin? %>
+      <td>
+        <%= link_to 'Show', mtype %> | 
+        <%= link_to 'Edit', edit_mtype_path(mtype) %> | 
+        <%= link_to 'Destroy', mtype, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    <% end %>
   </tr>
-<% end %>
+  <% end %>
 </table>
-</div>

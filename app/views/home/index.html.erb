@@ -1,24 +1,21 @@
-<div class="content">
 <h1>PMMTS - home#index</h1>
 
+<% if admin? %>
+<h2>USER</h2>
+	<%= link_to "New User", signup_path %>
+<% end %>
+
+<br><br>
+<h2>MATERIAL TYPES</h2>
+	<%= link_to 'All Material Types', mtypes_path %>
+
+<br><br>
+<h2>MATERIAL THICKNESSES</h2>
+	<%= link_to "All Thicknesses", mthicknesses_path %>
+<br><br>
+<h2>OFFCUTS</h2>
 	<% if admin? %>
-	<h2>USER</h2>
-		<%= link_to "New User", signup_path %>
+		<p>link_to #Report</p>
 	<% end %>
-
-	<h2>MATERIAL TYPES</h2>
-		<%= link_to 'MTYPES', mtypes_path %>
-		<% if admin? %>
-			<p>Add New Material Type</p>
-		<% end %>
-		
-	<h2>MATERIAL THICKNESSES</h2>
-		<%= link_to "All Thicknesses", mthicknesses_path %><br />
-
-	<h2>OFFCUTS</h2>
-		<% if admin? %>
-			<p>link_to #Report</p>
-		<% end %>
-		<p>link_to #All Available Offcuts</p>
-		<p>SEARCH FUNCTION</p>
-</div>
+	<p>link_to #All Available Offcuts</p>
+	<p>SEARCH FUNCTION</p>

@@ -29,22 +29,22 @@
 			<!-- The Log In link is unnecessary if authorize method is in place -->
 			<div class="main_nav">
 				<% if current_user %>
-					Logged in as <%= current_user.username %> |
+					Logged in as <a href="#" style="color:red; font-weight: bold; text-decoration: none;"><%= current_user.username %></a> |
 					<%= link_to "Log Out", logout_path %>
 				<% else %>
 					<%#= link_to "Log In", login_path %>
 				<% end %>
 			</div>
 
-			<!--
 			<div class="alert_msg">
-				<%# flash.each do |name, msg| %>
-				<%#= content_tag :div, msg, id: "flash_#{name}" %>
-				<%# end %>
+				<% flash.each do |name, msg| %>
+				<%= content_tag :div, msg, id: "flash_#{name}" %>
+				<% end %>
 			</div>
-			-->
 
-			<%= yield %>
+			<div class="content">
+				<%= yield %>
+			</div>
 
 			<div class="root_link">
 				<%= link_to "HOME", root_url %>

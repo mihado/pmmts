@@ -1,5 +1,4 @@
-<div class="content">
-<h1>Create New Thickness - mthicknesses#new</h1>
+<h1>Create New Thickness</h1>
 
 <%= form_for @mthickness do |t| %>
   <% if @mthickness.errors.any? %>
@@ -21,4 +20,3 @@
   <div class="actions"><%= t.submit "Add" %></div>
 <% end %>
 <%= link_to "Back", mthicknesses_path %>
-</div>
