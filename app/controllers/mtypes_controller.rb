@@ -5,7 +5,7 @@ before_filter :authorize
   # GET /mtypes
   # GET /mtypes.json
   def index
-    @mtypes = Mtype.all
+    @mtypes = Mtype.order(:code)
 
     respond_to do |format|
       format.html # index.html.erb

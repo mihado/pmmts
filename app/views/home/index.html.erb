@@ -1,18 +1,19 @@
 <h1>PMMTS - home#index</h1>
-
 <% if admin? %>
+<br />
 <h2>USER</h2>
 	<%= link_to "New User", signup_path %>
 <% end %>
 
-<br><br>
+<br /><br />
 <h2>MATERIAL TYPES</h2>
 	<%= link_to 'All Material Types', mtypes_path %>
 
-<br><br>
+<br /><br />
 <h2>MATERIAL THICKNESSES</h2>
 	<%= link_to "All Thicknesses", mthicknesses_path %>
-<br><br>
+
+<br /><br />
 <h2>OFFCUTS</h2>
 	<% if admin? %>
 		<p>link_to #Report</p>

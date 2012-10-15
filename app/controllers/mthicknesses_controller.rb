@@ -2,9 +2,9 @@ class MthicknessesController < ApplicationController
 
 before_filter :authorize
 
-# Action: show all thicknesses	
+# Action: show all thicknesses
 	def index
-		@mthicknesses = Mthickness.all 
+		@mthicknesses = Mthickness.order(:thickness)
 	end
 
 # Action: new | create a new thickness instance & display the create form
