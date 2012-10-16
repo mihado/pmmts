@@ -1,16 +1,13 @@
 <h1>Listing Offcuts</h1>
 
-<%= link_to 'In Use offcuts', in_use_path %>
-
-<%# the original search %>
-<%#= form_tag offcuts_path, :method => 'get' do %>
-    <%#= text_field_tag :search, params[:search] %>
-  <%#= submit_tag "Search", :name => nil %>
-<%# end %>
+<%= link_to 'In Use Offcuts', in_use_path %>
 
 <%= form_tag offcuts_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :mtype_s, params[:mtype_s] %> Type<br />
+    <%= text_field_tag :mthickness_s, params[:mthickness_s] %> Thickness<br />
+    <%= text_field_tag :height_s, params[:height_s] %> Height<br />
+    <%= text_field_tag :width_s, params[:width_s] %> Width<br />
   </p>
   <%= submit_tag "Search", :name => nil %>
 <% end %>
