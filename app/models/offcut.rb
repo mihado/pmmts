@@ -38,6 +38,14 @@ class Offcut < ActiveRecord::Base
   	arel
   end
 
+  def code=(value)
+    write_attribute(:code, value.upcase)
+  end
+
+  def mtype=(value)
+    write_attribute(:mtype, value.upcase)
+  end
+
 #TODO
   # def thickness=(value)
   #   write_attribute(:thickness, value.to_d)
