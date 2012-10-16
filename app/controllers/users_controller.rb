@@ -10,7 +10,7 @@ before_filter :authorize
 	def create
 		@user = User.new(params[:user])
 		if @user.save
-			redirect_to root_url, notice: "Signed up"
+			redirect_to root_url, notice: "Added new user to the database"
 		else
 			render "new"
 		end
