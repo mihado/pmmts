@@ -1,3 +1,5 @@
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -100,4 +102,8 @@ li:nth-child(odd) {
 
 li:nth-child(even) {
   background:   #fffff0;
+}
+
+#mtype_s, #mthickness_s, #height_s, #width_s {
+	width: 100px;
 }
