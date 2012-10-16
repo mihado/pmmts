@@ -1,14 +1,24 @@
 class OffcutsController < ApplicationController
   # GET /offcuts
   # GET /offcuts.json
-  def index
-    @offcuts = Offcut.find(:all, :conditions => ['use_up = ? AND in_use = ?', false, false])
+  
+#Original Search
+  # def index
+  #   @offcuts = Offcut.search(params[:search])
+  # end
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @offcuts }
-    end
+  def index
+    @offcuts = Offcut.search(params[:search])
   end
+
+  # def index
+  #   @offcuts = Offcut.find(:all, :conditions => ['use_up = ? AND in_use = ?', false, false])
+
+  #   respond_to do |format|
+  #     format.html # index.html.erb
+  #     format.json { render json: @offcuts }
+  #   end
+  # end
 
   def index_in_use
      @offcuts = Offcut.find(:all, :conditions => ['in_use = ?', true])

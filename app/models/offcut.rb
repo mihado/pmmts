@@ -6,4 +6,13 @@ class Offcut < ActiveRecord::Base
   validates :width, :presence => true, :numericality => true
   validates :thickness, :presence => true, :numericality => true
 
+  #search by mtype only
+  def self.search(search)
+    if search
+	    where('upper(mtype) LIKE upper(?) AND use_up = ? AND in_use = ?', "%#{search}%", false, false)
+    else
+		where('use_up = ? AND in_use = ?', false, false)
+    end
+  end
+
 end

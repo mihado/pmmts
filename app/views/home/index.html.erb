@@ -15,10 +15,10 @@
 
 <br /><br />
 <h2>OFFCUTS (mockup)</h2>
-	<% if admin? %>
-		<p>link_to #Report</p>
-	<% end %>
 	<%= link_to "Available Offcuts", offcuts_path %><br />
 	<%= link_to "Offcuts Being Used", in_use_path %><br />
 	<%= link_to "Used Up Offcuts", used_up_path %>
-	<p>SEARCH FUNCTION</p>
+
+	<% if admin? %>
+		<p>link_to #Report</p>
+	<% end %>
