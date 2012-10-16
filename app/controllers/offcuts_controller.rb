@@ -12,7 +12,10 @@ class OffcutsController < ApplicationController
   end
 
   def index_in_use
-     @offcuts = Offcut.find(:all, :conditions => ['in_use = ?', true])
+    #@offcuts = Offcut.find(:all, :conditions => ['in_use = ?', true])
+    
+    #move find into model
+    @offcuts = Offcut.find_in_use
 
     respond_to do |format|
       format.html # index.html.erb
@@ -21,7 +24,10 @@ class OffcutsController < ApplicationController
   end
 
   def index_used_up
-    @offcuts = Offcut.find(:all, :conditions => ['use_up = ?', true])
+    #@offcuts = Offcut.find(:all, :conditions => ['use_up = ?', true])
+
+    #move find into model
+    @offcuts = Offcut.find_used_up
 
     respond_to do |format|
       format.html # index.html.erb

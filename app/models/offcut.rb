@@ -25,4 +25,17 @@ class Offcut < ActiveRecord::Base
   	arel = arel. where('width >= ?', params[:width_s]) if params[:width_s].present?
   	arel
   end
+
+  def self.find_in_use
+  	arel = order('code ASC')
+  	arel = arel.where('in_use = ?', true)
+  	arel
+  end
+
+  def self.find_used_up
+  	arel = order('code ASC')
+  	arel = arel.where('use_up =?', true)
+  	arel
+  end
+
 end
