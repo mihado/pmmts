@@ -38,4 +38,13 @@ class Offcut < ActiveRecord::Base
   	arel
   end
 
+#TODO
+  # def thickness=(value)
+  #   write_attribute(:thickness, value.to_d)
+  # end
+
+  # def code=(code_string)
+  #   code_string = "#{mtype}#{thickness}"
+  #   write_attribute(:code, code_string.upcase)
+  # end
 end

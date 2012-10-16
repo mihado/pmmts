@@ -15,6 +15,8 @@
     <%= f.label :code %><br />
     <%= f.text_field :code %>
   </div>
+
+  
   <div class="field">
     <%= f.label :mtype %><br />
     <%= f.text_field :mtype %>
@@ -23,6 +25,18 @@
     <%= f.label :thickness %><br />
     <%= f.text_field :thickness %>
   </div>
+  
+
+<%# TODO change this one into select_tag %>
+  <!-- <div class="field">
+    <%#= f.label :mtype %><br />
+    <%#= select_tag :mtype_s, options_for_select(mtype_array_for_select), include_blank: true %>
+  </div>
+  <div class="field">
+    <%#= f.label :thickness %><br />
+    <%#= select_tag :thickness, options_for_select(mthickness_array_for_select), include_blank: true %>
+  </div> -->
+
   <div class="field">
     <%= f.label :height %><br />
     <%= f.text_field :height %>

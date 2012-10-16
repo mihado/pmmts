@@ -104,6 +104,6 @@ li:nth-child(even) {
   background:   #fffff0;
 }
 
-#mtype_s, #mthickness_s, #height_s, #width_s {
+#mtype_s, #mthickness_s, #height_s, #width_s, #thickness, #mtype {
 	width: 100px;
 }

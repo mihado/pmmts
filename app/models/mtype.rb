@@ -4,4 +4,8 @@ class Mtype < ActiveRecord::Base
   #has_many :offcut
 
   validates :code, :presence => true, :uniqueness => true
+
+	def code=(value)
+	  write_attribute(:code, value.upcase)
+	end
 end
