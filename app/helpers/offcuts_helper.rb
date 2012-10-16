@@ -1,0 +1,2 @@
+module OffcutsHelper
+end

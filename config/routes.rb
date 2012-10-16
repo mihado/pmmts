@@ -1,7 +1,5 @@
 Pmmts::Application.routes.draw do
 
-  resources :mtypes
-
   get "home/index"
   root :to => "home#index"
 
@@ -13,6 +11,12 @@ Pmmts::Application.routes.draw do
   resources :sessions
 
   resources :mthicknesses
+  resources :mtypes
+
+  resources :offcuts
+
+  get 'used_up', to: 'offcuts#index_used_up', as: 'used_up'
+  get 'in_use', to: 'offcuts#index_in_use', as: 'in_use'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

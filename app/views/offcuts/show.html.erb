@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @offcut.code %>
+</p>
+
+<p>
+  <b>Mtype:</b>
+  <%= @offcut.mtype %>
+</p>
+
+<p>
+  <b>Thickness:</b>
+  <%= @offcut.thickness %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @offcut.height %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @offcut.width %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @offcut.description %>
+</p>
+
+<p>
+  <b>In use:</b>
+  <%= @offcut.in_use %>
+</p>
+
+<p>
+  <b>Use up:</b>
+  <%= @offcut.use_up %>
+</p>
+
+
+<%= link_to 'Edit', edit_offcut_path(@offcut) %> |
+<%= link_to 'Available offcuts', offcuts_path %> |
+<%= link_to 'In Use offcuts', in_use_path %>

@@ -1,0 +1,36 @@
+<h1>Listing Offcuts</h1>
+<% if admin? %>
+    <%= link_to 'New Offcut', new_offcut_path %> | <%= link_to 'In Use offcuts', in_use_path %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Mtype</th>
+    <th>Thickness</th>
+    <th>Height</th>
+    <th>Width</th>
+    <th>Description</th>
+    <th>In use</th>
+    <th>Use up</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @offcuts.each do |offcut| %>
+  <tr>
+    <td><%= offcut.code %></td>
+    <td><%= offcut.mtype %></td>
+    <td><%= offcut.thickness %></td>
+    <td><%= offcut.height %></td>
+    <td><%= offcut.width %></td>
+    <td><%= offcut.description %></td>
+    <td><%= offcut.in_use %></td>
+    <td><%= offcut.use_up %></td>
+    <td><%= link_to 'Show', offcut %></td>
+    <td><%= link_to 'Edit', edit_offcut_path(offcut) %></td>
+    <td><%= link_to 'Destroy', offcut, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
