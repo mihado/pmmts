@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121016081656) do
+ActiveRecord::Schema.define(:version => 20121016104205) do
 
   create_table "mthicknesses", :force => true do |t|
     t.decimal  "thickness"
