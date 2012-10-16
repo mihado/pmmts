@@ -1,5 +1,5 @@
 <h1>Listing Offcuts Being Used</h1>
-<%= link_to 'Available offcuts', offcuts_path %>
+<%= link_to 'Available Offcuts', offcuts_path %>
 <table>
   <tr>
     <th>Code</th>
@@ -8,8 +8,10 @@
     <th>Height</th>
     <th>Width</th>
     <th>Description</th>
-    <th>In use</th>
-    <th>Use up</th>
+    <% if admin? %>
+        <th>In use</th>
+        <th>Use up</th>
+    <% end %>
     <th></th>
     <th></th>
     <th></th>
@@ -23,10 +25,12 @@
     <td><%= offcut.height %></td>
     <td><%= offcut.width %></td>
     <td><%= offcut.description %></td>
-    <td><%= offcut.in_use %></td>
-    <td><%= offcut.use_up %></td>
+    <% if admin? %>
+        <td><%= offcut.in_use %></td>
+        <td><%= offcut.use_up %></td>
+    <% end %>
     <td><%= link_to 'Show', offcut %></td>
-    <td><%= link_to 'Edit', edit_offcut_path(offcut) %></td>
+    <td><%= link_to 'Update', edit_offcut_path(offcut) %></td>
     <td>
         <% if admin? %>
         <%= link_to 'Destroy', offcut, method: :delete, data: { confirm: 'Are you sure?' } %>

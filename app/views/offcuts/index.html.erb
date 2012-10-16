@@ -24,8 +24,10 @@
     <th>Height</th>
     <th>Width</th>
     <th>Description</th>
-    <th>In use</th>
-    <th>Use up</th>
+    <% if admin? %>
+        <th>In use</th>
+        <th>Use up</th>
+    <% end %>
     <th></th>
     <th></th>
     <th></th>
@@ -39,10 +41,12 @@
     <td><%= offcut.height %></td>
     <td><%= offcut.width %></td>
     <td><%= offcut.description %></td>
-    <td><%= offcut.in_use %></td>
-    <td><%= offcut.use_up %></td>
+    <% if admin? %>
+        <td><%= offcut.in_use %></td>
+        <td><%= offcut.use_up %></td>
+    <% end %>
     <td><%= link_to 'Show', offcut %></td>
-    <td><%= link_to 'Edit', edit_offcut_path(offcut) %></td>
+    <td><%= link_to 'Use', edit_offcut_path(offcut) %></td>
     <td>
         <% if admin? %>
         <%= link_to 'Destroy', offcut, method: :delete, data: { confirm: 'Are you sure?' } %>
