@@ -7,8 +7,10 @@
     <!-- <%#= text_field_tag :mthickness_s, params[:mthickness_s] %> Thickness<br /> -->
     <%= select_tag :mtype_s, options_for_select(mtype_array_for_select), include_blank: true %> Type<br />
     <%= select_tag :mthickness_s, options_for_select(mthickness_array_for_select), include_blank: true %> Thickness<br />
-    <%= text_field_tag :height_s, params[:height_s] %> Height<br />
-    <%= text_field_tag :width_s, params[:width_s] %> Width<br />
+    <!-- <%#= text_field_tag :height_s, params[:height_s] %> Height<br /> -->
+    <!-- <%#= text_field_tag :width_s, params[:width_s] %> Width<br /> -->
+    <%= text_field_tag(:height_s, nil, :onkeypress => "return isNumberKey(event);") %> Height<br />
+    <%= text_field_tag(:width_s, nil, :onkeypress => "return isNumberKey(event);") %> Width<br />
   <%= submit_tag "Search", :name => nil %>
 <% end %>
 
